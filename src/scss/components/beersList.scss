@@ -7,20 +7,29 @@
       gap: 2rem;
       flex-wrap: wrap;
       justify-content: center;
+      list-style-type: none;
 
       img {
-         height: 20rem;
+         width: 300px;
+         height: 300px;
+         object-fit: scale-down;
       }
 
       li {
          padding: 0;
          margin: 0;
          flex-basis: 30%;
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         flex-direction: column;
          cursor: pointer;
+
+         a {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+            text-decoration: none;
+            color: black;
+         }
       }
    }
 }

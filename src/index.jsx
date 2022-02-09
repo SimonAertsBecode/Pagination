@@ -8,6 +8,9 @@ import rootReducer from './store/reducers/index';
 //*Import style
 import './scss/index.scss';
 
+//* Router related imports
+import { BrowserRouter } from 'react-router-dom';
+
 //**Imports for redux */
 import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
@@ -20,7 +23,9 @@ const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk
 ReactDOM.render(
    <React.StrictMode>
       <Provider store={store}>
-         <App />
+         <BrowserRouter>
+            <App />
+         </BrowserRouter>
       </Provider>
    </React.StrictMode>,
    document.getElementById('root')
