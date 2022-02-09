@@ -1,24 +1,28 @@
 //* redux related imports
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 //*Import all actions
 import * as Action from './store/actions/index';
 
+//*Import components
+import RenderBeers from './components/RenderBeers';
+import Pagination from './components/Pagination';
+import { useEffect } from 'react';
+
 const App = () => {
    const dispatch = useDispatch();
-   const testInitialState = useSelector((state) => console.log(state.mainReducer.test));
 
-   const tryFct = () => {
-      dispatch(Action.changeTest(true));
-   };
+   useEffect(() => {
+      dispatch(Action.fetchData());
+   }, [dispatch]);
 
    return (
       <>
-         <div>
-            coucou
-            <button onClick={tryFct}>click-me</button>
-            {testInitialState}
-         </div>
+         <section className='container'>
+            <h1>Famoco's exercice</h1>
+            <RenderBeers />
+         </section>
+         <Pagination />
       </>
    );
 };

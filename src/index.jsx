@@ -2,8 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 
-//*import reducers
-import rootReducer from './store/reducers';
+//*Import reducers
+import rootReducer from './store/reducers/index';
+
+//*Import style
+import './scss/index.scss';
 
 //**Imports for redux */
 import { createStore, applyMiddleware } from 'redux';

@@ -1,17 +1,16 @@
-import actionObject from '../actions/constant';
+import mainActions from '../actions/constant';
 
 const initialState = {
-   test: null,
+   api: [],
 };
-
-console.log(actionObject);
 
 export const mainReducer = (state = initialState, action) => {
    switch (action.type) {
-      case actionObject.TEST:
+      case mainActions.FETCH_DATA:
+         console.log(action.type);
          return {
             ...state,
-            test: action.payload,
+            api: action.payload,
          };
       default:
          return {
