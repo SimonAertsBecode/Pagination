@@ -4,7 +4,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 //* React related imports
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 //*Import all actions
 import * as Action from '../store/actions/index';

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 
 //*Import all actions
 import * as Action from '../store/actions/index';
@@ -13,6 +13,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 const Pagination = () => {
    const dispatch = useDispatch();
+
    const pageNumber = useSelector((state) => state.mainReducer.pageNumber);
 
    const goBack = () => {
@@ -26,6 +27,18 @@ const Pagination = () => {
    const selectPage = (value) => {
       dispatch(Action.changePage(value));
    };
+
+   const returnButton = (value) => {
+      return (
+         <button
+            onClick={() => {
+               selectPage(value);
+            }}
+         >
+            <GiBeerStein />
+         </button>
+      );
+   };
    return (
       <section className='pagination'>
          <section className='buttons'>
@@ -38,28 +51,9 @@ const Pagination = () => {
                   <IoIosArrowBack />
                </button>
             )}
-
-            <button
-               onClick={() => {
-                  selectPage(1);
-               }}
-            >
-               <GiBeerStein />
-            </button>
-            <button
-               onClick={() => {
-                  selectPage(2);
-               }}
-            >
-               <GiBeerStein />
-            </button>
-            <button
-               onClick={() => {
-                  selectPage(3);
-               }}
-            >
-               <GiBeerStein />
-            </button>
+            {returnButton(1)}
+            {returnButton(2)}
+            {returnButton(3)}
             {pageNumber === 3 ? (
                <button disabled={true}>
                   <IoIosArrowForward />

@@ -1,15 +1,20 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const BeerDetails = () => {
    const location = useLocation();
+   const navigate = useNavigate();
 
    const { state: beer } = location;
-   console.log(beer);
+
+   const goBack = () => {
+      navigate(-1);
+   };
 
    return (
       <section className='beer-details'>
          <img src={beer.image_url} alt={beer.name} />
+         <button onClick={goBack}>Go back</button>
          <div>
             <h3>{beer.name}</h3>
             <p>{beer.description}</p>

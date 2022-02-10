@@ -6,8 +6,9 @@
       flex-direction: row;
       gap: 2rem;
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: space-between;
       list-style-type: none;
+      margin-bottom: 4rem;
 
       img {
          width: 300px;
