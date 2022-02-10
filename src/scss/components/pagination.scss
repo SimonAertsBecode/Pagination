@@ -3,7 +3,6 @@
    position: fixed;
    bottom: 0;
    flex: 1;
-   backdrop-filter: blur(30px);
    height: 4rem;
    display: flex;
    justify-content: center;
@@ -14,7 +13,12 @@
       cursor: pointer;
       background-color: transparent;
       font-size: 3rem;
-      color: rgba($color: #e0df00, $alpha: 0.8);
+      color: rgba($color: $primary-color, $alpha: 0.6);
       margin: 0 1rem;
+      transition: ease-in 0.5s;
+   }
+
+   button:focus {
+      background-color: aqua;
    }
 }

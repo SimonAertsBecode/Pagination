@@ -12,6 +12,7 @@ import * as Action from '../store/actions/index';
 //*Import components
 import RenderBeers from './RenderBeers';
 import Pagination from './Pagination';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
    const dispatch = useDispatch();

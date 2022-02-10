@@ -3,7 +3,7 @@ import React, { useRef, useState } from 'react';
 //*Import all actions
 import * as Action from '../store/actions/index';
 
-//* React icon
+//* React icons
 import { GiBeerStein } from 'react-icons/gi';
 import { IoIosArrowBack } from 'react-icons/io';
 import { IoIosArrowForward } from 'react-icons/io';
@@ -39,6 +39,7 @@ const Pagination = () => {
          </button>
       );
    };
+
    return (
       <section className='pagination'>
          <section className='buttons'>

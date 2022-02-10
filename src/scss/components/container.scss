@@ -6,8 +6,14 @@
    flex-direction: column;
    flex: 1;
    background-color: transparent;
+   backdrop-filter: blur(20px);
 
    h1 {
       text-align: center;
+      color: rgba($color: $secondary-color, $alpha: 1);
+      font-size: 3rem;
+      letter-spacing: 3px;
+      font-weight: bold;
+      text-transform: uppercase;
    }
 }

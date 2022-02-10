@@ -1,3 +1,6 @@
+$primary-color: #faf869;
+$secondary-color: #c75824;
+
 body {
    margin: 0;
    padding: 0;
@@ -6,6 +9,14 @@ body {
    display: flex;
    flex-direction: column;
    justify-content: center;
-   box-sizing: content-box;
+   box-sizing: border-box;
    font-family: 'Roboto', sans-serif;
+
+   .svg-container {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1000;
+   }
 }
