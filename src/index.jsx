@@ -9,7 +9,7 @@ import rootReducer from './store/reducers/index';
 import './scss/index.scss';
 
 //* Router related imports
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 
 //**Imports for redux */
 import { createStore, applyMiddleware } from 'redux';
@@ -23,9 +23,9 @@ const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk
 ReactDOM.render(
    <React.StrictMode>
       <Provider store={store}>
-         <BrowserRouter>
+         <HashRouter>
             <App />
-         </BrowserRouter>
+         </HashRouter>
       </Provider>
    </React.StrictMode>,
    document.getElementById('root')
