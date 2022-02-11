@@ -4,7 +4,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 //* React related imports
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 
 //*Import all actions
 import * as Action from '../store/actions/index';
@@ -12,7 +12,6 @@ import * as Action from '../store/actions/index';
 //*Import components
 import RenderBeers from './RenderBeers';
 import Pagination from './Pagination';
-import { Link } from 'react-router-dom';
 
 const Home = () => {
    const dispatch = useDispatch();

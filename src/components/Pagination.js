@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 
 //*Import all actions
 import * as Action from '../store/actions/index';
@@ -11,40 +11,54 @@ import { IoIosArrowForward } from 'react-icons/io';
 //*Redux related imports
 import { useDispatch, useSelector } from 'react-redux';
 
-const Pagination = () => {
+const PaginationMemo = () => {
    const dispatch = useDispatch();
+
+   const [activeBtn, setActiveBtn] = useState(0);
 
    const pageNumber = useSelector((state) => state.mainReducer.pageNumber);
 
    const goBack = () => {
       dispatch(Action.changePage(pageNumber - 1));
+      setActiveBtn(pageNumber - 2);
    };
 
    const goForward = () => {
       dispatch(Action.changePage(pageNumber + 1));
+      setActiveBtn(pageNumber);
    };
 
-   const selectPage = (value) => {
-      dispatch(Action.changePage(value));
-   };
+   const selectPage = useCallback(
+      (value) => {
+         dispatch(Action.changePage(value));
+         setActiveBtn(value - 1);
+      },
+      [dispatch]
+   );
 
-   const returnButton = (value) => {
-      return (
-         <button
-            onClick={() => {
-               selectPage(value);
-            }}
-         >
-            <GiBeerStein />
-         </button>
-      );
-   };
+   const buttons = useMemo(() => {
+      let buttons = [];
+      for (let i = 0; i < 3 /*Can put dynamic value here dependending on the length of API*/; i++) {
+         buttons.push(
+            <button
+               key={i}
+               className={activeBtn === i ? 'btn-active' : null}
+               onClick={() => {
+                  selectPage(i + 1);
+               }}
+            >
+               <GiBeerStein />
+            </button>
+         );
+      }
+      return buttons;
+   }, [activeBtn, selectPage]);
 
    return (
       <section className='pagination'>
          <section className='buttons'>
             {pageNumber === 1 ? (
-               <button disabled={true}>
+               <button disabled={true} className='btn-disabled'>
                   <IoIosArrowBack />
                </button>
             ) : (
@@ -52,11 +66,14 @@ const Pagination = () => {
                   <IoIosArrowBack />
                </button>
             )}
-            {returnButton(1)}
-            {returnButton(2)}
-            {returnButton(3)}
+
+            {/*Render btns*/}
+            {buttons.map((btn) => {
+               return btn;
+            })}
+
             {pageNumber === 3 ? (
-               <button disabled={true}>
+               <button disabled={true} className='btn-disabled'>
                   <IoIosArrowForward />
                </button>
             ) : (
@@ -69,4 +86,5 @@ const Pagination = () => {
    );
 };
 
+const Pagination = React.memo(PaginationMemo);
 export default Pagination;

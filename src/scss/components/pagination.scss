@@ -1,7 +1,7 @@
 .pagination {
    width: 100%;
    position: fixed;
-   bottom: 0;
+   bottom: 10px;
    flex: 1;
    height: 4rem;
    display: flex;
@@ -13,12 +13,18 @@
       cursor: pointer;
       background-color: transparent;
       font-size: 3rem;
-      color: rgba($color: $primary-color, $alpha: 0.6);
+      color: rgba($color: $primary-color, $alpha: 0.8);
       margin: 0 1rem;
-      transition: ease-in 0.5s;
+      padding: 0;
+      transition: ease-in 0.2s;
    }
 
-   button:focus {
-      background-color: aqua;
+   .btn-active {
+      border-bottom: solid 2px $primary-color;
+   }
+
+   .btn-disabled {
+      cursor: not-allowed;
+      color: rgba($color: $primary-color, $alpha: 0.3);
    }
 }
