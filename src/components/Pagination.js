@@ -14,9 +14,9 @@ import { useDispatch, useSelector } from 'react-redux';
 const PaginationMemo = () => {
    const dispatch = useDispatch();
 
-   const [activeBtn, setActiveBtn] = useState(0);
-
    const pageNumber = useSelector((state) => state.mainReducer.pageNumber);
+
+   const [activeBtn, setActiveBtn] = useState(pageNumber - 1);
 
    const goBack = () => {
       dispatch(Action.changePage(pageNumber - 1));
