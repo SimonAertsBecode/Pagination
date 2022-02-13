@@ -1,9 +1,10 @@
 .pagination {
    width: 100%;
    position: fixed;
-   bottom: 10px;
+   bottom: 0px;
    flex: 1;
-   height: 4rem;
+   height: auto;
+   padding-bottom: 10px;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -12,19 +13,19 @@
       border: none;
       cursor: pointer;
       background-color: transparent;
-      font-size: 3rem;
-      color: rgba($color: $primary-color, $alpha: 0.8);
-      margin: 0 1rem;
+      font-size: 2.5rem;
+      color: rgba($color: beige, $alpha: 0.5);
+      margin: 0.5rem 0.5rem 0 0.5rem;
       padding: 0;
       transition: ease-in 0.2s;
    }
 
    .btn-active {
-      border-bottom: solid 3px $primary-color;
+      border-bottom: solid 3px rgba($color: white, $alpha: 0.5);
    }
 
    .btn-disabled {
       cursor: not-allowed;
-      color: rgba($color: $primary-color, $alpha: 0.3);
+      color: rgba($color: white, $alpha: 0.3);
    }
 }
