@@ -14,8 +14,9 @@ const BeerDetails = () => {
    return (
       <section className='beer-details'>
          <img src={beer.image_url} alt={beer.name} />
-         <button onClick={goBack}>Go back</button>
+
          <div>
+            <button onClick={goBack}>Go back</button>
             <h3>{beer.name}</h3>
             <p>{beer.description}</p>
          </div>

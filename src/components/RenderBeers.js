@@ -16,12 +16,10 @@ const RenderBeers = () => {
          return (
             <li key={beer.id}>
                <Tilt tiltMaxAngleX={20} tiltMaxAngleY={20}>
-                  <div>
-                     <Link to={`${beer.id}`} state={beer}>
-                        <h3>{beer.name}</h3>
-                        <img src={beer.image_url} alt={beer.name}></img>
-                     </Link>
-                  </div>
+                  <Link to={`${beer.id}`} state={beer}>
+                     <h3>{beer.name}</h3>
+                     <img src={beer.image_url} alt={beer.name}></img>
+                  </Link>
                </Tilt>
             </li>
          );
