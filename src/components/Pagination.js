@@ -49,6 +49,7 @@ const PaginationMemo = () => {
             >
                <GiBeerStein />
             </button>
+            //**coucou */
          );
       }
       return buttons;
