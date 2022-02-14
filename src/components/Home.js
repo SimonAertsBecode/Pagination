@@ -12,6 +12,7 @@ import * as Action from '../store/actions/index';
 //*Import components
 import RenderBeers from './RenderBeers';
 import Pagination from './Pagination';
+import TableBeers from './TableBeers';
 
 const Home = () => {
    const dispatch = useDispatch();
@@ -26,7 +27,7 @@ const Home = () => {
       <>
          <section className='container'>
             <h1>Famoco's exercice</h1>
-            <RenderBeers />
+            <TableBeers />
          </section>
          <Pagination />
       </>

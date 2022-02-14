@@ -1,7 +1,7 @@
 .container {
-   width: 70%;
+   width: auto;
    margin-left: 50%;
-   transform: translateX(-50%);
+   transform: translateX(-15%);
    display: flex;
    flex-direction: column;
    flex: 1;
@@ -12,7 +12,7 @@
    h1 {
       text-align: center;
       color: rgba($color: $primary-color, $alpha: 0.8);
-      transform: translateX(5%);
+      transform: translateX(-20%);
       font-size: 3rem;
       letter-spacing: 3px;
       font-weight: bold;
