@@ -15,15 +15,17 @@ const TableBeers = () => {
       return beers.map((beer) => {
          return (
             <tr key={beer.id}>
-               <td className='image'>
-                  <img src={beer.image_url} alt={beer.name}></img>
-               </td>
+               <Link to='beerDetails' state={beer}>
+                  <td className='image'>
+                     <img src={beer.image_url} alt={beer.name}></img>
+                  </td>
+               </Link>
                <td>
                   <h3>{beer.name}</h3>
                </td>
                <td className='description'>
                   <p>{beer.description}</p>
-                  <Link to={`${beer.id}`} state={beer}>
+                  <Link to='beerDetails' state={beer}>
                      <button>see more</button>
                   </Link>
                </td>

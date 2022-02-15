@@ -8,7 +8,7 @@ const Routing = () => {
    return (
       <Routes>
          <Route index element={<Home />} />
-         <Route path=':id' element={<BeerDetails />} />
+         <Route path='beerDetails' element={<BeerDetails />} />
          <Route path='*' element={<Navigate to='/' />} />
       </Routes>
    );
