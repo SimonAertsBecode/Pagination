@@ -10,7 +10,6 @@ import { useEffect } from 'react';
 import * as Action from '../store/actions/index';
 
 //*Import components
-import RenderBeers from './RenderBeers';
 import Pagination from './Pagination';
 import TableBeers from './TableBeers';
 

@@ -1,3 +1,16 @@
+::-webkit-scrollbar {
+   width: 0.6rem;
+}
+::-webkit-scrollbar-track {
+   background-color: rgba($color: $secondary-color, $alpha: 0.2);
+   border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb {
+   background-color: rgba($color: $primary-color, $alpha: 0.8);
+   border-radius: 100vw;
+}
+
 .list-beers {
    height: 70vh;
    overflow: auto;
@@ -34,16 +47,18 @@
          }
 
          tr {
-            td {
+            td:not(:first-child) {
                padding: 10px;
                text-align: left;
                vertical-align: top;
+               border-bottom: solid 1px yellow;
             }
 
             .image {
                text-align: center;
-               background-color: rgba($color: $secondary-color, $alpha: 0.4);
                border-radius: 20px;
+               background-color: rgba($color: wheat, $alpha: 0.2);
+               padding: 1vw;
             }
 
             .description {

@@ -7,9 +7,9 @@
    flex: 1;
    background-color: transparent;
    padding-bottom: 3rem;
-   background: inline-image('../../public/layered-waves-haikei.svg');
 
    h1 {
+      margin-bottom: 1rem;
       text-align: center;
       color: rgba($color: $primary-color, $alpha: 0.8);
       transform: translateX(-20%);

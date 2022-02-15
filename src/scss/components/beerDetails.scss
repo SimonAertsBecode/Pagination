@@ -13,6 +13,9 @@
    img {
       width: 20%;
       object-fit: contain;
+      background-color: rgba($color: wheat, $alpha: 0.2);
+      border-radius: 20px;
+      padding: 1vw;
    }
 
    button {
