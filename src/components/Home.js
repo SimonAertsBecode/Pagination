@@ -25,7 +25,7 @@ const Home = () => {
    return (
       <>
          <section className='container'>
-            <h1>Famoco's exercice</h1>
+            <h1>Pagination exercice</h1>
             <TableBeers />
          </section>
          <Pagination />
