@@ -1,8 +1,6 @@
-# Famoco's technical exercice
+# Pagination in table format exercice
 
-## Hello Famoco's team.
-
-You will find just [here](https://simonaertsbecode.github.io/Famoco/) my App for Famoco.
+You will find just [here](https://simonaertsbecode.github.io/Famoco/) my App.
 
 The goal was to chose an open API and display the item in a table format of 3 columns with 10 items per page. It was also asked be able to click on item and show a brief description of it.
 
