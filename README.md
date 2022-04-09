@@ -1,6 +1,6 @@
 # Pagination in table format exercice
 
-You will find just [here](https://simonaertsbecode.github.io/Famoco/) my App.
+You will find just [here](https://simonaertsbecode.github.io/Pagination/) my App.
 
 The goal was to chose an open API and display the item in a table format of 3 columns with 10 rows per page. It was also asked be able to click on item and show a brief description of it.
 
